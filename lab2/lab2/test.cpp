@@ -4,25 +4,25 @@ using namespace std;
 
 void Caesar()
 {
-    int key = 0;
-    string str = "";
+    int key=0;
+    string str="";
 
-    cout << "Enter string to encode: ";
-    cin >> str;
+    cout<<"Enter string to encode: ";
+    cin>>str;
 
-    cout << "Enter key: ";
-    cin >> key;  
+    cout<< "Enter key: ";
+    cin >>key;  
 
     cout << "String to encode: " << str << endl;
-    key %= 26;
+    key%= 26;
 
-    for (int i = 0; i < str.length(); i++)
+    for (int i =0;i<str.length();i++)
     {
-        if (str[i] + key > 'z') 
-            str[i] -= 26;
+        if (str[i]+key>'z') 
+            str[i]-=26;
         str[i] += key;     
     }
-
+    
     cout << "Encoded string: " << str << endl;
 
     for (int i = 0; i < str.length(); i++)
